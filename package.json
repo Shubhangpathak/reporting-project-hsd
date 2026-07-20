@@ -1,0 +1,16 @@
+{
+  "name": "reporting-for-hsd",
+  "private": true,
+  "workspaces": [
+    "fe",
+    "be"
+  ],
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail \"npm run dev --workspace fe\" \"npm run dev --workspace be\"",
+    "build": "npm run build --workspace fe",
+    "start": "npm run build && npm run start --workspace be"
+  },
+  "devDependencies": {
+    "concurrently": "10.0.3"
+  }
+}

@@ -1,0 +1,4 @@
+node_modules/
+fe/dist/
+.env
+npm-debug.log*
