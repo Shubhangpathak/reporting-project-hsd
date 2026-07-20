@@ -1,7 +1,9 @@
-const mongoose = require("mongoose");
+const { Pool } = require("pg");
 
-async function connectDatabase(mongoUri) {
-  await mongoose.connect(mongoUri);
+async function connectDatabase(databaseUrl) {
+  const pool = new Pool({ connectionString: databaseUrl });
+  await pool.query("SELECT 1");
+  return pool;
 }
 
 module.exports = {

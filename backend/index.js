@@ -26,20 +26,20 @@ app.use("/api/admin", adminRouter);
 app.use(express.static(frontendPath));
 
 async function startServer() {
-  const mongoUri = process.env.MONGO_URI;
+  const databaseUrl = process.env.DATABASE_URL;
 
-  if (!mongoUri) {
-    console.error("MONGO_URI is missing. Add it to backend/.env before starting the server.");
+  if (!databaseUrl) {
+    console.error("DATABASE_URL is missing. Add it to backend/.env before starting the server.");
     process.exit(1);
   }
 
   try {
-    await connectDatabase(mongoUri);
+    app.locals.database = await connectDatabase(databaseUrl);
     app.listen(port, () => {
       console.log(`Backend running on http://localhost:${port}`);
     });
   } catch {
-    console.error("Could not connect to MongoDB. Check MONGO_URI and make sure MongoDB is running.");
+    console.error("Could not connect to PostgreSQL. Check DATABASE_URL and make sure the database is available.");
     process.exit(1);
   }
 }

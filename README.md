@@ -2,7 +2,7 @@
 
 ## Installation
 
-Install Node.js 24 LTS and MongoDB, then install the workspace dependencies:
+Install Node.js 24 LTS, then install the workspace dependencies:
 
 ```bash
 npm install
@@ -10,7 +10,9 @@ npm install
 
 ## Environment setup
 
-Copy `frontend/.env.example` to `frontend/.env` and `backend/.env.example` to `backend/.env`, then update the values for your environment.
+Copy `frontend/.env.example` to `frontend/.env` and `backend/.env.example` to `backend/.env`.
+
+Set `DATABASE_URL` in `backend/.env` to a PostgreSQL connection string. For Neon, copy the pooled connection string from the Connect dialog.
 
 ## Running the project
 
@@ -40,12 +42,12 @@ npm start
 
 ```text
 .
-├── frontend/
-│   └── src/
-├── backend/
-│   └── routes/
-├── package.json
-├── package-lock.json
-├── README.md
-└── .gitignore
+|-- frontend/
+|   `-- src/
+|-- backend/
+|   `-- routes/
+|-- package.json
+|-- package-lock.json
+|-- README.md
+`-- .gitignore
 ```
