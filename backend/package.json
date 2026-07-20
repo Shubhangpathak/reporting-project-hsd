@@ -1,5 +1,5 @@
 {
-  "name": "be",
+  "name": "backend",
   "private": true,
   "scripts": {
     "dev": "node --watch index.js",

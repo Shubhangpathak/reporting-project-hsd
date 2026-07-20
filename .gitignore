@@ -1,4 +1,5 @@
 node_modules/
-fe/dist/
+frontend/dist/
 .env
 npm-debug.log*
+.npm-cache

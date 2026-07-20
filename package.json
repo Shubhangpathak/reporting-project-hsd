@@ -2,13 +2,13 @@
   "name": "reporting-for-hsd",
   "private": true,
   "workspaces": [
-    "fe",
-    "be"
+    "frontend",
+    "backend"
   ],
   "scripts": {
-    "dev": "concurrently --kill-others-on-fail \"npm run dev --workspace fe\" \"npm run dev --workspace be\"",
-    "build": "npm run build --workspace fe",
-    "start": "npm run build && npm run start --workspace be"
+    "dev": "concurrently --kill-others-on-fail \"npm run dev --workspace frontend\" \"npm run dev --workspace backend\"",
+    "build": "npm run build --workspace frontend",
+    "start": "npm run build && npm run start --workspace backend"
   },
   "devDependencies": {
     "concurrently": "10.0.3"

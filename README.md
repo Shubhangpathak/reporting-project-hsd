@@ -10,7 +10,7 @@ npm install
 
 ## Environment setup
 
-Copy `fe/.env.example` to `fe/.env` and `be/.env.example` to `be/.env`, then update the values for your environment.
+Copy `frontend/.env.example` to `frontend/.env` and `backend/.env.example` to `backend/.env`, then update the values for your environment.
 
 ## Running the project
 
@@ -31,18 +31,18 @@ npm start
 - `npm run dev` starts both development servers.
 - `npm run build` builds the frontend.
 - `npm start` builds the frontend and starts the backend.
-- `npm run dev --workspace fe` starts only the frontend.
-- `npm run dev --workspace be` starts only the backend.
-- `npm run preview --workspace fe` previews the frontend build.
-- `npm run start --workspace be` starts only the backend.
+- `npm run dev --workspace frontend` starts only the frontend.
+- `npm run dev --workspace backend` starts only the backend.
+- `npm run preview --workspace frontend` previews the frontend build.
+- `npm run start --workspace backend` starts only the backend.
 
 ## Project structure
 
 ```text
 .
-├── fe/
+├── frontend/
 │   └── src/
-├── be/
+├── backend/
 │   └── routes/
 ├── package.json
 ├── package-lock.json

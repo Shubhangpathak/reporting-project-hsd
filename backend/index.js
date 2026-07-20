@@ -9,7 +9,7 @@ const { userRouter } = require("./routes/user");
 
 const app = express();
 const port = process.env.PORT || 3000;
-const frontendPath = path.join(__dirname, "../fe/dist");
+const frontendPath = path.join(__dirname, "../frontend/dist");
 
 app.use(cors({ origin: process.env.CLIENT_ORIGIN }));
 app.use(express.json());
@@ -29,7 +29,7 @@ async function startServer() {
   const mongoUri = process.env.MONGO_URI;
 
   if (!mongoUri) {
-    console.error("MONGO_URI is missing. Add it to be/.env before starting the server.");
+    console.error("MONGO_URI is missing. Add it to backend/.env before starting the server.");
     process.exit(1);
   }
 
