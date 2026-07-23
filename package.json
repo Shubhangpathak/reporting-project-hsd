@@ -6,11 +6,15 @@
     "backend"
   ],
   "scripts": {
+    "db:migrate": "npm run db:migrate --workspace backend",
     "dev": "concurrently --kill-others-on-fail \"npm run dev --workspace frontend\" \"npm run dev --workspace backend\"",
     "build": "npm run build --workspace frontend",
     "start": "npm run build && npm run start --workspace backend"
   },
   "devDependencies": {
     "concurrently": "10.0.3"
+  },
+  "overrides": {
+    "shell-quote": "1.10.0"
   }
 }
